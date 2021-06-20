@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="../icons/tarot_icon.png"
+      type="image/x-icon"
+    />
+    <title>Tarot</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <style>
+      body {
+        position: relative;
+        margin: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: #2d2d2d;
+        --padding-x: 20vh;
+      }
+      #app {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .cardList {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50vw;
+        height: 70vh;
+        box-sizing: border-box;
+        padding: 5vh 0;
+        --card-height: 50vh;
+      }
+      .card {
+          position: relative;
+        width: 250px;
+        height: auto;
+        transform-style: preserve-3d;
+      }
+      .card .card-image {
+        border: 10px solid white;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        transform-style: preserve-3d;
+    }
+      .card .card-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform-style: preserve-3d;
+      }
+      .card .info{
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          background-color: #fff;
+          transform: translateZ(50px);
+          transform-style: preserve-3d;
+          width: 100%;
+          height: 100px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding: 10px;
+          box-sizing: border-box;
+      }
+      .card .info .title{
+        padding: 0;
+        margin: 0;
+      }
+      .card .info .content{
+        font-size: 13px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="cardList">
+        <div class="card" data-tilt data-tilt-max="50" data-tilt-speed="400" data-tilt-perspective="500">
+          <div class="card-image">
+            <img src="../images/tarot-01-magician.jpg" alt="magician" />
+          </div>
+          <div class="info">
+            <h3 class="title">The Magician</h1>
+            <div class="content">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perspiciatis commodi eos quo dolores quasi veniam amet
+              necessitatibus! Neque quisquam eos minus non qui inventore nihil
+              animi? Repellat neque eligendi odit. Cum molestiae commodi
+              repellendus vel maiores illum, dignissimos quia. Obcaecati facere
+              enim quas officia? Tenetur nesciunt dicta cumque alias quia
+              accusamus, repudiandae, quis corrupti impedit, illum at ea omnis
+              mollitia.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------- -->
+    <script type="text/javascript" src="../libs/vanilla-tilt.js"></script>
+
+  </body>
+</html>

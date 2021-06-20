@@ -1,0 +1,42 @@
+{
+    "name": "Homepage",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "A Chromium extension to display homepage.",
+    "icons": {
+        "16": "./icons/tarot_icon.png",
+        "32": "./icons/tarot_icon.png",
+        "48": "./icons/tarot_icon.png",
+        "128": "./icons/tarot_icon.png"
+    },
+    "permissions": ["tabs"],
+    "action": {
+        "default_popup": "popups/popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+              "<all_urls>"
+            ],
+            "js": ["libs/vanilla-tilt.js",
+                "content-scripts/content.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "chrome_url_overrides" : {
+        "newtab": "override-page/tarot.html"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["scss/main.css", "scss/main.css.map"],
+            "matches": ["<all_urls>"]
+        },
+        {
+            "resources": ["images/*.jpg"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}

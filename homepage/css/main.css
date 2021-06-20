@@ -1,0 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.wallpaper {
+  height: calc(100vh);
+  background: url(../images/wallpp1.jpg);
+}
+/*# sourceMappingURL=main.css.map */
